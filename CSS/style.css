@@ -437,7 +437,8 @@ section.candySale > div:nth-child(3) > a
     text-decoration: none;
     color: #f8f8f8;
 }
-section.candySale > div:nth-child(3) > a >span
+section.candySale > div:nth-child(3) > a >span,
+section.candySale > div:nth-child(3) > a >span > i
 {
     display: inline-flex;
     background-color: #0e1619;
@@ -446,12 +447,30 @@ section.candySale > div:nth-child(3) > a >span
     align-items: center;
     border-radius: 4px;
     padding: 3px 10px;
+    position: relative;
+}
+section.candySale > div:nth-child(3) > a >span > i
+{
+    text-align: center;
+    position: relative;
+    background-color: #0e1619;
+    right: 0px;
+    animation: candyArrow 1s alternate infinite linear;
 }
 section.candySale h3
 {
     text-align: center;
 }
-
+@keyframes candyArrow {
+    from
+    {
+        right: 0;
+    }
+    to
+    {
+        right: -10px;
+    }
+}
 /* css for candy customization */
 section.customizeCandy,
 section.nutrition,
@@ -932,6 +951,12 @@ footer >div > div > ul > li > a
     {
         display: flex;
     }
+
+    /* CSS for candy images */
+    section.candySale  > div:nth-child(4)
+    {
+        display: none;
+    }
    /* Css for footer */
     footer
     {
@@ -961,6 +986,11 @@ footer >div > div > ul > li > a
     footer > div > div
     {
         flex-basis: 80%;
+    }
+    section.customizeCandy  > div:nth-child(3),
+    section.candySale  > div:nth-child(5)
+    {
+        display: none;
     }
 
     /* masthead media query */
