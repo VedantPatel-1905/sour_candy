@@ -602,6 +602,7 @@ section.nutrition > div:nth-child(2)
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
     /* background: #f5e104; */
     background: #dcf5c6;
+    z-index: 10;
     padding: 30px;
     animation: glow 2s alternate infinite;
 }
@@ -951,7 +952,7 @@ footer >div > div > ul > li > a
     {
         display: flex;
     }
-
+    
     /* CSS for candy images */
     section.candySale  > div:nth-child(4)
     {
@@ -974,26 +975,61 @@ footer >div > div > ul > li > a
     }
 
     /* custom candy media query */
-    section.customizeCandy > div.customizeCandy {
+    section.customizeCandy > div.customizeCandy 
+    {
         flex-direction: column;
+    }
+    section.customizeCandy > div.customizeCandy >div
+    {
+        margin: 10px 0;
     }
     
 }
 @media only screen and (max-width: 640px) 
 {
    
-    /* ------- global media query ------- */
+    section h2
+    {
+        font-size: 2em!important;
+    }
+    /* masthead media query */
+    section.productIntro > div:nth-child(2) > p
+    {
+        font-size: 1.1em;
+        text-align: center;
+        margin: 2px 0;
+    }
+
+    /* candy sale media query */
+    section.candySale > div.productScroll >article div:first-child img
+    {
+        max-width: 150px;
+    }
+    section.candySale > div.productScroll >article div:first-child 
+    {
+        width: 180px;
+        height: 280px;
+    }
+    /* ------- footer media query ------- */
     footer > div > div
     {
         flex-basis: 80%;
     }
     section.customizeCandy  > div:nth-child(3),
-    section.candySale  > div:nth-child(5)
+    section.customizeCandy  > div:nth-child(4),
+    section.candySale  > div:nth-child(5),
+    section.nutrition  > div:nth-child(3),
+    section.nutrition  > div:nth-child(4)
     {
         display: none;
     }
-
+    
     /* masthead media query */
+    section.productIntro > div:nth-child(2) > h1 
+    {
+        font-size: 2.8em;
+        margin-bottom: 0.2em;
+    }
     div.masthead > img:last-child
     {
         display: none;
@@ -1001,6 +1037,16 @@ footer >div > div > ul > li > a
 }
 @media only screen and (max-width: 426px) 
 {
+    /* masthead media query */
+    section.productIntro > div:nth-child(2) > h1 
+    {
+        font-size: 2.8em;
+        margin-bottom: 0.2em;
+    }
+    section h2
+    {
+        font-size: 1.7em!important;
+    }
     /* masthead media query */
     div.masthead > img:nth-child(3)
     {
@@ -1014,6 +1060,10 @@ footer >div > div > ul > li > a
 }
 @media only screen and (max-width: 320px) 
 {
+    section h2
+    {
+        font-size: 1.5em!important;
+    }
     
 }
 
