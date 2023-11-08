@@ -1,0 +1,989 @@
+/* ------- Global styling ------- */
+body
+{
+    margin: 0px;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+/* ------- set the text properties------- */
+h1
+{
+    font-family: 'Agdasima', sans-serif;
+}
+h2,h3,h4,h5,h6
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p,a,li,span
+{
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+
+/* ------- css for header------- */
+header
+{
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: rgba(239, 237, 237, 0.19);
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.change
+{
+    animation: headerBackground .7s forwards;
+}
+.reset
+{
+    animation: resetHeaderBackground .7s forwards;
+}
+/* ------- css for website logo------- */
+header > div
+{
+    height: 100px;
+}
+
+header > div:last-child
+{
+    margin: 0 0 0 10px;
+    display: none;
+}
+header > div:last-child > button
+{
+    height: 100%;
+    width: auto;
+    border: none;
+    background: none;
+}
+header > div:last-child > button >img
+{
+    height: 40px;
+    width: auto;
+}
+
+header > div >a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+header > div >a > img
+{
+    width: 75px;
+    height: auto;
+    margin: 0 0 0 20px
+}
+header > div:last-child > button > span
+{
+    display: flex;
+    height: 4px;
+    width: 42px;
+    border-radius: 3px;
+    margin: 10px 0;
+    background-color: rgb(30, 30, 30);
+    transition: all .2s ease-in-out;
+}
+
+/* ------- css for navigation bar and links ------- */
+header > nav
+{
+    margin: 0 15px 0 0;
+}
+header > nav > menu
+{
+    list-style: none;
+    display: flex;
+    
+}
+header > nav > menu > li
+{
+    padding: 0 15px;
+    
+}
+header > nav > menu > li > a
+{
+    color: #0e0e0e;
+    font-family: 'Permanent marker',sans-serif;
+}
+header > nav > menu > li > a:nth-child(1):hover,
+header > nav > menu > li > a:nth-child(2):hover,
+header > nav > menu > li > a:nth-child(3):hover,
+header > nav > menu > li > a:nth-child(4):hover
+{
+    border-bottom: 3px solid #0e0e0e;
+}
+header.active1 > nav > menu > li > a#activeLink1,
+header.active2 > nav > menu > li > a#activeLink2,
+header.active3 > nav > menu > li > a#activeLink3,
+header.active4 > nav > menu > li > a#activeLink4
+{
+    border-bottom: 3px solid #0e0e0e;
+}
+
+menu.showMenu
+{
+    display: flex !important;
+}
+
+@keyframes headerBackground {
+    0% {
+        background-color: rgba(239, 237, 237, 0.2);
+    }
+    25% {
+        background-color: rgba(239, 237, 237, 0.4);
+    }
+    50% {
+        background-color: rgba(239, 237, 237, 0.8);
+    }
+    75% {
+        background-color: rgba(239, 237, 237, 0.9);
+    }
+    100% {
+        background-color: rgba(239, 237, 237, 1);
+    }
+}
+@keyframes resetHeaderBackground {
+    0% {
+        background-color: rgba(239, 237, 237, 1);
+    }
+    25% {
+        background-color: rgba(239, 237, 237, 0.9);
+    }
+    50% {
+        background-color: rgba(239, 237, 237, 0.8);
+    }
+    75% {
+        background-color: rgba(239, 237, 237, 0.4);
+    }
+    100% {
+        background-color: rgba(239, 237, 237, 0.2);
+    }
+}
+
+/* css for home page pre built pc */
+
+/* css for masthead of the website */
+section.productIntro
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10em 0 2em 0;
+    /* background: linear-gradient(90deg, #ff930f 0%, #fffa5c 50%,#ff930f 100%); */
+    /* background-color: #f5e104; */
+    background-color: #dcf5c6;
+}
+section.productIntro::before
+{
+    content: url('../img/leftGrass.png');
+    position: absolute;
+    z-index: 1;
+    bottom: -4px;
+}
+section.productIntro::after
+{
+    content: url('../img/rightGrass.png');
+    position: absolute;
+    z-index: 1;
+    bottom: -4px;
+    right: 0;
+}
+div.masthead {
+    /* content: ''; */
+    
+    margin: 1em auto 0px auto;
+    display: flex;
+    /* background-image: url(../img/masthead1.png), url(../img/masthead2.png),url(../img/masthead3.png),url(../img/masthead4.png);
+    background-position: 10% 0%, 70% 85%, 69% 19%,5% 75%;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-size: 8em,8em,8em,8em; */
+}
+
+div.masthead > img
+{
+    height: 13em;
+    width: auto;
+    filter: drop-shadow(0 0 10px #660033);
+    animation: glow 2s alternate infinite;
+}
+
+
+@keyframes glow
+{
+    0%
+    {
+        filter: drop-shadow(0 0 10px #42bb60);
+        
+    }
+    100%
+    {
+        filter: drop-shadow(0 0 25px rgb(20, 113, 33));
+
+    }
+}
+
+section.productIntro > div:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+section.productIntro > div:nth-child(2) > h1
+{
+    font-size: 3em;
+    margin-bottom: .2em;
+}
+section.productIntro > div:nth-child(2) > p
+{
+    margin: 0;
+    line-height: 2em;
+}
+section.productIntro > div:nth-child(2) > a
+{
+    color: #f8f8f8;
+}
+section.productIntro > div:nth-child(2) > a >span
+{
+    display: flex;
+    background-color: #222222;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+
+/* css  for candies display */
+section.candySale
+{
+    margin: 3em 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #fbeb3f; */
+    background-color: #e8f6dc;
+    position: relative;
+}
+section.candySale > div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.candySale > div:first-child >h2
+{
+    font-size: 2.3em;
+    font-weight: 700;
+    margin: 0px;
+    padding: 1em 0 0 0;
+    color: #10091d;
+}
+section.candySale > div:first-child >p
+{
+    text-align: center;
+    max-width: 50%;
+}
+
+section.candySale > div.productScroll
+{
+    display: flex;
+
+}
+/* scrolling section of the product  */
+
+section.candySale > div.productScroll
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section.candySale > div:nth-child(4)
+{
+    content: '';
+    background-image: url('../img/side1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22em;
+    width: 0em;
+    position: absolute;
+    z-index: 10;
+    transition: all .5s linear;
+    top: -100px;
+}
+section.candySale > div:nth-child(5)
+{
+    transition: all .5s linear;
+    content: '';
+    background-image: url('../img/side3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25em;
+    width: 0em;
+    position: absolute;
+    bottom: -75px;
+    right: 0;
+}
+section.candySale > div.productScroll::-webkit-scrollbar
+{
+    /* this is to hide scrollbar  */
+    display: none;
+}
+section.candySale > div.productScroll >article p
+{
+    padding: 3px 0;
+}
+section.candySale > div.productScroll >article
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 3em;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 1em;
+}
+section.candySale > div.productScroll >article div:first-child
+{
+    display: flex;
+    border-radius: 3px;
+    height: 300px;
+    width: 250px;
+    justify-content: center;  
+    align-items: center;
+}
+section.candySale > div.productScroll >article div:first-child:hover img
+{
+    transform: scale(1.1);
+    
+}
+section.candySale > div.productScroll >article div:first-child img
+{
+    transition: all .3s ease-in-out;
+    margin: auto;
+    max-width: 250px;
+}
+section.candySale > div.productScroll >article >div:nth-child(2),
+section.candySale > div.productScroll >article >div:nth-child(3)
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+section.candySale > div.productScroll >article >div:nth-child(2) > p
+{
+    font-size: .9em;
+    color: #6f6f6f;
+    margin: 0px;
+}
+section.candySale > div.productScroll >article >div:last-child
+{
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+section.candySale > div.productScroll >article >div:last-child >a
+{
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #222222;
+    transition: all .2s ease-in-out;
+    color: #f2f2f2;
+}
+section.candySale > div.productScroll >article >div:last-child >a:hover
+{
+    transform: scale(1.1);
+}
+section.candySale > div:last-child,
+section.nutrition > div:last-child
+{
+    width: 100%;
+}
+section.candySale > div:last-child > img,
+section.nutrition > div:last-child > img
+{
+    width: 100%;
+}
+
+section.candySale > div:nth-child(3) 
+{
+    margin: 3em 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.candySale > div:nth-child(3) > a
+{
+    text-decoration: none;
+    color: #f8f8f8;
+}
+section.candySale > div:nth-child(3) > a >span
+{
+    display: inline-flex;
+    background-color: #0e1619;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 3px 10px;
+}
+section.candySale h3
+{
+    text-align: center;
+}
+
+/* css for candy customization */
+section.customizeCandy,
+section.nutrition,
+section.signup
+{
+    /* background-color: #fbeb3f; */
+    background-color: #e8f6dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+section.customizeCandy h2,
+section.nutrition  h2,
+section.signup h2
+{
+    font-size: 2.3em;
+    font-weight: 700;
+    margin: 0px;
+    padding: 1em 0 0 0;
+    color: #10091d;
+}
+section.customizeCandy > div:first-child > p
+{
+    text-align: center;
+    
+}
+section.customizeCandy > div.customizeCandy
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+section.customizeCandy > div:last-child,
+section.customizeCandy > div:last-child> img
+{
+    width: 100%;
+}
+div.customizeCandy
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.customizeCandy > div
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+}
+
+div.customizeCandy > div > span 
+{
+    display: inline-flex;
+    align-items: center;
+}
+div.customizeCandy > div > span > img
+{
+    width: auto;
+    height: 12em;
+}
+div.customizeCandy > div svg
+{
+    width: auto;
+    height: 100%;
+    position: absolute;
+
+}
+div.customizeCandy > div rect
+{
+    fill: none;
+    stroke: #0e0e0e;
+    stroke-width: 4; /* this is the width*/
+    stroke-dasharray: 422,0; /* this defines pattern of the dashes and the gap used to paint the outline*/
+    transition: all .35s linear;
+}
+div.customizeCandy > div:hover rect
+{
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+}
+
+section.customizeCandy > div:nth-child(3)
+{
+    content: '';
+    background-image: url('../img/side4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22em;
+    width: 11em;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    transition: all .5s linear;
+}
+section.customizeCandy > div:nth-child(4)
+{
+    content: '';
+    background-image: url('../img/side5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22em;
+    width: 11em;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    transition: all .5s linear;
+}
+
+/* css for nutrition information */
+section.nutrition
+{
+    /* background-color: #fbeb3f; */
+    background-color: #e8f6dc;
+    
+}
+section.nutrition > div:nth-child(2)
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    /* background: #f5e104; */
+    background: #dcf5c6;
+    padding: 30px;
+    animation: glow 2s alternate infinite;
+}
+section.nutrition > div:nth-child(2) h3
+{
+    font-size: 1.4em;
+    margin: 0px;
+    border-bottom: 1px solid #0e0e0e;
+}
+section.nutrition > div:nth-child(2) > div:first-child > p:nth-of-type(1)
+{
+    font-size: 1.1em;
+}
+section.nutrition > div:nth-child(2) > div:first-child > p:nth-of-type(2),
+section.nutrition > div:nth-child(2) > div:nth-child(2)
+{
+    font-size: 1.1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 6px solid #0e0e0e;
+}
+
+section.nutrition > div:nth-child(2) > div:nth-child(2)
+{
+    border-bottom: 3px solid #0e0e0e;
+    align-items: baseline;
+}
+section.nutrition > div:nth-child(2) > div:nth-child(2) > span
+{
+    display: flex;
+    flex-direction: column;
+}
+section.nutrition > div:nth-child(2) > div:nth-child(2) > span:first-child >span:first-child
+{
+    font-size: .8em;
+}
+section.nutrition > div:nth-child(2) > div:nth-child(2) > span:last-child
+{
+    font-size: 1.4em;
+}
+
+section.nutrition > div:nth-child(2) > div:nth-child(3) 
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+section.nutrition > div:nth-child(2) > div:nth-child(3) > p
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #0e0e0e;
+}
+
+section.nutrition > div:nth-child(3)
+{
+    content: '';
+    background-image: url('../img/side2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22em;
+    width: 0em;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    transition: all .5s linear;
+    
+}
+section.nutrition > div:nth-child(4)
+{
+    content: '';
+    background-image: url('../img/side5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 22em;
+    width: 0em;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    transition: all .5s linear;
+
+}
+
+/* css for sign up from of the website */
+section.signup
+{
+    position: relative;
+    background-color: #e8f6dc;
+}
+
+section.signup > div:last-child 
+{
+    width: 100%;
+    margin: 0 0 3em 0;
+}
+section.signup > div:last-child > form 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+section.signup > div:last-child > form > input
+{
+    height: 5em;
+    border: none;
+    background-color: #efefef;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+section.signup > div:last-child > form > input:focus,
+section.signup > div:last-child > form > input:nth-child(2):focus {
+    outline: none;
+    border: none;
+    /* background-color: #d4d4d4; */
+}
+
+section.signup > div:last-child > form  input:nth-child(1) 
+{
+    max-width: 40em;
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0 0 0 20px;
+}
+
+section.signup > div:last-child > form  input:nth-child(2) 
+{
+    max-width: 8em;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #1b1b1c;
+    transition: background-color 0.3s;
+}
+
+section.signup > div:last-child > form  input:nth-child(2):hover 
+{
+    background-color: #0e1619;
+}
+section.signup::before
+{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    bottom: -4px;
+    background:url('../img/left-top-corner.png') ;
+    height: 5em;
+    width: 10em;
+    left: 0;
+}
+section.signup::after
+{
+    content: '';
+    background:url('../img/top_right_corner_yellow-c.png') ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+    bottom: -4px;
+    right: 0;
+}
+/* Css for the footer of the website */
+footer  
+{
+    background-color: #e0e0e0;
+    padding: 15px 0 0 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 20px 0px, rgba(0, 0, 0, 0.69) 0px 5px 20px 0px;
+    z-index: 10;
+}
+
+footer  > div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer  > div > div 
+{
+    max-width: 300px;
+}
+
+footer  h3 
+{
+    color: #0e0e0e;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer  p 
+{
+    color: #151515;
+}
+
+footer  > div:last-child 
+{
+    color: #0e0e0e;
+    font-size: 14px;
+}
+
+footer  > div 
+{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+footer  > div > div 
+{
+    flex-basis: 20%;
+}
+
+footer  > div > div h3 
+{
+    font-size: 18px;
+    margin:0 0 10px 0;
+}
+
+footer  > div > div:first-child > p 
+{
+    line-height: 28.1px;
+}
+
+footer  > div > div > ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}   
+
+footer  > div > div ul li
+{
+    margin: 0 0 5px 0;
+}
+
+footer  > div > div ul li a
+{
+    color: #efefef;
+}
+
+footer >div > div > ul > li > a:hover 
+{
+    color: #0b8baf;
+}
+
+footer  > div > div > form 
+{
+    position: relative;
+}
+
+footer  > div > div > form> input
+{
+    height: 30px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+footer  > div > div > form> input:focus,
+footer  > div > div > form> input:nth-child(2):focus {
+    outline: none;
+    background-color: #d4d4d4;
+}
+
+footer  > div > div > form input:nth-child(2) 
+{
+    margin-top: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0b8baf;
+    transition: background-color 0.3s;
+}
+
+footer  > div > div > form input:nth-child(2):hover 
+{
+    background-color: #1289aa;
+}
+
+footer >div > div > ul > li > a 
+{
+    transition: color 0.3s;
+}
+  
+/* ------- css for bottom section of footer------- */
+.indexFooterBottom 
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.indexFooterBottom p 
+{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* ------- css for responsive layout of website------- */
+
+@media only screen and (max-width:1440px) 
+{
+}
+@media only screen and (max-width: 1280px)  
+{   
+}
+@media only screen and (max-width: 1024px)  
+{
+    /* ------- header media query ------- */
+    header > nav > menu > li
+    {
+        padding: 0 7px;
+        font-size: 1.19em;
+    }
+
+    /* masthead media query */
+    section.productIntro::before,
+    section.productIntro::after
+    {
+        display: none;
+    }
+
+
+    /* footer media query */
+    footer > div > div
+    {
+        flex-basis: 30%;
+    }
+    
+
+}
+@media only screen and (max-width:769px)  
+{
+    /* ------- header media query ------- */
+    header > nav 
+    {
+       display: none;
+    }
+    header > div:last-child
+    {
+        display: flex;
+    }
+   /* Css for footer */
+    footer
+    {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    footer > div > div
+    {
+        flex-basis: 30%;
+    }
+    footer > div >div
+    {
+        flex-basis: 50%;
+    }
+
+    /* custom candy media query */
+    section.customizeCandy > div.customizeCandy {
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (max-width: 640px) 
+{
+   
+    /* ------- global media query ------- */
+    footer > div > div
+    {
+        flex-basis: 80%;
+    }
+
+    /* masthead media query */
+    div.masthead > img:last-child
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width: 426px) 
+{
+    /* masthead media query */
+    div.masthead > img:nth-child(3)
+    {
+        display: none;
+    }
+    /* ------- global media query ------- */
+    footer > div >div
+    {
+        flex-basis: 60%;
+    }
+}
+@media only screen and (max-width: 320px) 
+{
+    
+}
+
