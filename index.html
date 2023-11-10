@@ -51,7 +51,7 @@
             </button>
         </div>
     </header>
-
+    <div class="backgroundBlur"></div>
     <!--------- This is main section for the website --------->
     <main class="indexMain">
 
@@ -250,12 +250,10 @@
             <div>
               Not a significant source of saturated fat, trans fat, cholesterol, dietary fiber, vitamin D, calcium, iron, and potassium.
             </div>
+
           </div>
           <div></div>
           <div></div>
-          <div>
-            <img src="./img/tear.png" alt="tear">
-          </div>
         </section>
         
         <!-- html for signup section of the product -->
@@ -270,6 +268,8 @@
               <input type="submit" value="Subscribe">
             </form>
           </div>
+          <div></div>
+          <div></div>
         </section>
         
         
@@ -298,8 +298,10 @@
             <h3>Reach out to us</h3>
     <!--------- form method="post" is not added because it will try to sent the form to backend which does not exist and create error --------->
             <form action="#" enctype="multipart/form-data">
-                <input type="email" placeholder="Enter your email" required>
-                <input type="submit" value="Subscribe">
+              <input type="text" placeholder="First name" required>
+              <input type="text" placeholder="Last name" required>
+              <textarea name="area" cols="30" rows="2" placeholder="Enter your message here" required></textarea>
+              <input type="submit" value="Submit">
             </form>
         </div>
     </div>

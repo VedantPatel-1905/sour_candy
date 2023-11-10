@@ -1,9 +1,8 @@
 // Functions show and hide hidden menu 
 function showMenu() 
 {
-  document.getElementById('hiddenMenu').classList.toggle('showMenu');
+  document.getElementById('hideMenu').classList.toggle('showMenu');
   document.querySelector('.backgroundBlur').classList.toggle('showMenu');
-  document.querySelector('.navBtn').classList.toggle('navBtnCross');
 }
 
 // this even listener ensure that html is loaded first

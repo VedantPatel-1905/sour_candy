@@ -132,9 +132,19 @@ header.active4 > nav > menu > li > a#activeLink4
     border-bottom: 3px solid #0e0e0e;
 }
 
-menu.showMenu
+.showMenu
 {
     display: flex !important;
+}
+.backgroundBlur
+{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
 }
 
 @keyframes headerBackground {
@@ -504,7 +514,7 @@ section.customizeCandy > div.customizeCandy
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 80%;
 }
 section.customizeCandy > div:last-child,
 section.customizeCandy > div:last-child> img
@@ -540,7 +550,7 @@ div.customizeCandy > div > span > img
 }
 div.customizeCandy > div svg
 {
-    width: auto;
+    width: 95%;
     height: 100%;
     position: absolute;
 
@@ -600,8 +610,9 @@ section.nutrition > div:nth-child(2)
     flex-direction: column;
     border-radius: 8px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-    /* background: #f5e104; */
     background: #dcf5c6;
+    overflow: hidden;
+    width: 50%;
     z-index: 10;
     padding: 30px;
     animation: glow 2s alternate infinite;
@@ -684,8 +695,7 @@ section.nutrition > div:nth-child(4)
     position: absolute;
     bottom: 30px;
     right: 0;
-    transition: all .5s linear;
-
+    transition: all .5s linear;    
 }
 
 /* css for sign up from of the website */
@@ -693,14 +703,20 @@ section.signup
 {
     position: relative;
     background-color: #e8f6dc;
+    padding: 2em 0 0 0;
 }
 
-section.signup > div:last-child 
+section.signup > div:nth-child(1)
+{
+    z-index: 2;
+}
+section.signup > div:nth-child(2)
 {
     width: 100%;
     margin: 0 0 3em 0;
+    z-index: 2;
 }
-section.signup > div:last-child > form 
+section.signup > div:nth-child(2)> form 
 {
     display: flex;
     justify-content: center;
@@ -708,7 +724,7 @@ section.signup > div:last-child > form
     width: 90%;
     margin: auto;
 }
-section.signup > div:last-child > form > input
+section.signup > div:nth-child(2)> form > input
 {
     height: 5em;
     border: none;
@@ -717,14 +733,14 @@ section.signup > div:last-child > form > input
     transition: background-color 0.3s;
 }
 
-section.signup > div:last-child > form > input:focus,
-section.signup > div:last-child > form > input:nth-child(2):focus {
+section.signup > div:nth-child(2)> form > input:focus,
+section.signup > div:nth-child(2)> form > input:nth-child(2):focus {
     outline: none;
     border: none;
     /* background-color: #d4d4d4; */
 }
 
-section.signup > div:last-child > form  input:nth-child(1) 
+section.signup > div:nth-child(2)> form  input:nth-child(1) 
 {
     max-width: 40em;
     width: 100%;
@@ -733,7 +749,7 @@ section.signup > div:last-child > form  input:nth-child(1)
     padding: 0 0 0 20px;
 }
 
-section.signup > div:last-child > form  input:nth-child(2) 
+section.signup > div:nth-child(2)> form  input:nth-child(2) 
 {
     max-width: 8em;
     width: 100%;
@@ -745,36 +761,41 @@ section.signup > div:last-child > form  input:nth-child(2)
     transition: background-color 0.3s;
 }
 
-section.signup > div:last-child > form  input:nth-child(2):hover 
+section.signup > div:nth-child(2)> form  input:nth-child(2):hover 
 {
     background-color: #0e1619;
 }
 section.signup::before
 {
     content: '';
-    position: absolute;
-    z-index: 10;
-    bottom: -4px;
     background:url('../img/left-top-corner.png') ;
-    height: 5em;
-    width: 10em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 15em;
+    width: 31em;
+    position: absolute;
+    top: 20px;
     left: 0;
+    z-index: 1;
+    
 }
 section.signup::after
 {
+    z-index: 1;
     content: '';
-    background:url('../img/top_right_corner_yellow-c.png') ;
+    background:url('../img/right-top-corner.png') ;
     background-size: contain;
     background-repeat: no-repeat;
+    height: 15em;
+    width: 31em;
     position: absolute;
-    z-index: 10;
-    bottom: -4px;
-    right: 0;
+    top: 20px;
+    right: 0;    
 }
 /* Css for the footer of the website */
 footer  
 {
-    background-color: #e0e0e0;
+    background-color: #ececec;
     padding: 15px 0 0 0;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 20px 0px, rgba(0, 0, 0, 0.69) 0px 5px 20px 0px;
@@ -833,60 +854,47 @@ footer  > div > div:first-child > p
     line-height: 28.1px;
 }
 
-footer  > div > div > ul
-{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}   
-
-footer  > div > div ul li
-{
-    margin: 0 0 5px 0;
-}
-
-footer  > div > div ul li a
-{
-    color: #efefef;
-}
-
-footer >div > div > ul > li > a:hover 
-{
-    color: #0b8baf;
-}
-
 footer  > div > div > form 
 {
-    position: relative;
+    display: flex;    
+    flex-direction: column;
 }
 
 footer  > div > div > form> input
 {
     height: 30px;
     border: none;
+    margin: 2px 0;
     background-color: #e0e0e0;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+footer  > div > div > form> textarea
+{
+    border: none;
+    outline: none;
+    margin: 2px 0 0 0;
+    background-color: #e0e0e0;
+}
 
-footer  > div > div > form> input:focus,
-footer  > div > div > form> input:nth-child(2):focus {
+footer  > div > div > form> input:focus
+{
     outline: none;
     background-color: #d4d4d4;
 }
 
-footer  > div > div > form input:nth-child(2) 
+footer  > div > div > form input:nth-child(4) 
 {
     margin-top: 10px;
     cursor: pointer;
     color: #fff;
-    background-color: #0b8baf;
+    background-color: #4a9e00;
     transition: background-color 0.3s;
 }
 
-footer  > div > div > form input:nth-child(2):hover 
+footer  > div > div > form input:nth-child(4):hover 
 {
-    background-color: #1289aa;
+    background-color: #449100;
 }
 
 footer >div > div > ul > li > a 
@@ -932,6 +940,17 @@ footer >div > div > ul > li > a
         display: none;
     }
 
+    /* mix media query */
+    div.customizeCandy > div > span > img
+    {
+        height: 10em;
+    }
+    /* nutrition media query */
+    section.nutrition > div:nth-child(2)
+    {
+        width: 60%;
+    }
+
 
     /* footer media query */
     footer > div > div
@@ -939,18 +958,32 @@ footer >div > div > ul > li > a
         flex-basis: 30%;
     }
     
-
+    
 }
 @media only screen and (max-width:769px)  
 {
     /* ------- header media query ------- */
-    header > nav 
-    {
-       display: none;
-    }
     header > div:last-child
     {
         display: flex;
+    }
+    header > nav > menu 
+    {
+        display: none;
+        position: fixed;
+        right: 0;
+        margin: 41px 0 0 0;
+        width: 100%;
+        height: 40%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #EFFAFD;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    header > nav > menu >li
+    {
+        text-align: center;
     }
     
     /* CSS for candy images */
@@ -958,7 +991,33 @@ footer >div > div > ul > li > a
     {
         display: none;
     }
-   /* Css for footer */
+    /* mix media query */
+    div.customizeCandy > div > span > img
+    {
+        height: 12em;
+    }
+    div.customizeCandy > div svg
+    {
+        width: 80%;
+    }
+    /* nutrition media query */
+    section.nutrition > div:nth-child(2)
+    {
+        width: 70%;
+    }  
+    section.nutrition > div:nth-child(2) > div:nth-child(3) >p  
+    {
+        font-size: 1.1em;
+    }
+    /* signup media query */
+    section.signup::before,
+    section.signup::after
+    {
+        height: 12em;
+        width: 25em;
+    
+    }
+    /* Css for footer */
     footer
     {
         flex-wrap: wrap;
@@ -973,7 +1032,7 @@ footer >div > div > ul > li > a
     {
         flex-basis: 50%;
     }
-
+    
     /* custom candy media query */
     section.customizeCandy > div.customizeCandy 
     {
@@ -987,7 +1046,7 @@ footer >div > div > ul > li > a
 }
 @media only screen and (max-width: 640px) 
 {
-   
+    
     section h2
     {
         font-size: 2em!important;
@@ -999,7 +1058,7 @@ footer >div > div > ul > li > a
         text-align: center;
         margin: 2px 0;
     }
-
+    
     /* candy sale media query */
     section.candySale > div.productScroll >article div:first-child img
     {
@@ -1009,6 +1068,21 @@ footer >div > div > ul > li > a
     {
         width: 180px;
         height: 280px;
+    }
+    /* nutrition media query */
+    section.nutrition > div:nth-child(2)
+    {
+        width: 75%;
+    }  
+    section.nutrition > div:nth-child(2) > div:nth-child(3) >p  
+    {
+        font-size: 1em;
+    }
+    /* signup media query */
+    section.signup::before,
+    section.signup::after
+    {
+        display: none;
     }
     /* ------- footer media query ------- */
     footer > div > div
@@ -1052,7 +1126,21 @@ footer >div > div > ul > li > a
     {
         display: none;
     }
-    /* ------- global media query ------- */
+    /* mix media query */
+    div.customizeCandy > div svg
+    {
+        width: 90%;
+    }
+    /* nutrition media query */
+    section.nutrition > div:nth-child(2) > div:nth-child(2) >p  
+    {
+        font-size: 1em;
+    }
+    section.nutrition > div:nth-child(2) > div:nth-child(3) >p  
+    {
+        font-size: .9em;
+    }
+    /* ------- footer media query ------- */
     footer > div >div
     {
         flex-basis: 60%;
