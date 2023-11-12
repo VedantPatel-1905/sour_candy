@@ -435,20 +435,20 @@ section.nutrition > div:last-child > img
     width: 100%;
 }
 
-section.candySale > div:nth-child(3) 
+div.more 
 {
     margin: 3em 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section.candySale > div:nth-child(3) > a
+div.more > a
 {
     text-decoration: none;
     color: #f8f8f8;
 }
-section.candySale > div:nth-child(3) > a >span,
-section.candySale > div:nth-child(3) > a >span > i
+div.more > a >span,
+div.more > a >span > i
 {
     display: inline-flex;
     background-color: #0e1619;
@@ -459,7 +459,7 @@ section.candySale > div:nth-child(3) > a >span > i
     padding: 3px 10px;
     position: relative;
 }
-section.candySale > div:nth-child(3) > a >span > i
+div.more > a >span > i
 {
     text-align: center;
     position: relative;
@@ -559,16 +559,20 @@ div.customizeCandy > div rect
 {
     fill: none;
     stroke: #0e0e0e;
-    stroke-width: 4; /* this is the width*/
-    stroke-dasharray: 422,0; /* this defines pattern of the dashes and the gap used to paint the outline*/
-    transition: all .35s linear;
+    stroke-width: 4;
+    stroke-dasharray: 422,0; 
+    transition: all .35s linear;   
+}
+div.customizeCandy > div:first-child rect
+{
+    animation: svgRotator 1s alternate infinite   ;
 }
 div.customizeCandy > div:hover rect
 {
-    stroke-width: 5;
-    stroke-dasharray: 15, 310;
+    stroke-dasharray: 116, 550;
     stroke-dashoffset: 48;
 }
+
 
 section.customizeCandy > div:nth-child(3)
 {
