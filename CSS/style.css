@@ -608,6 +608,10 @@ section.nutrition
     background-color: #e8f6dc;
     
 }
+section.nutrition
+{
+    text-align: center;
+}
 section.nutrition > div:nth-child(2)
 {
     display: flex;
