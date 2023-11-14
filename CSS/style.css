@@ -1,4 +1,4 @@
-/* ------- Global styling ------- */
+/*  Global styling  */
 body
 {
     margin: 0px;
@@ -8,7 +8,7 @@ html
     scroll-behavior: smooth;
 }
 
-/* ------- set the text properties------- */
+/*  set the text properties */
 h1
 {
     font-family: 'Agdasima', sans-serif;
@@ -26,7 +26,7 @@ p,a,li,span
 }
 
 
-/* ------- css for header------- */
+/*  css for header */
 header
 {
     z-index: 999;
@@ -48,7 +48,7 @@ header
 {
     animation: resetHeaderBackground .7s forwards;
 }
-/* ------- css for website logo------- */
+/*  css for website logo */
 header > div
 {
     height: 100px;
@@ -96,7 +96,7 @@ header > div:last-child > button > span
     transition: all .2s ease-in-out;
 }
 
-/* ------- css for navigation bar and links ------- */
+/*  css for navigation bar and links  */
 header > nav
 {
     margin: 0 15px 0 0;
@@ -910,7 +910,7 @@ footer >div > div > ul > li > a
     transition: color 0.3s;
 }
   
-/* ------- css for bottom section of footer------- */
+/*  css for bottom section of footer */
 .indexFooterBottom 
 {
     width: 100%;
@@ -924,7 +924,7 @@ footer >div > div > ul > li > a
     font-size: 12px;
 }
 
-/* ------- css for responsive layout of website------- */
+/*  css for responsive layout of website */
 
 @media only screen and (max-width:1440px) 
 {
@@ -934,7 +934,7 @@ footer >div > div > ul > li > a
 }
 @media only screen and (max-width: 1024px)  
 {
-    /* ------- header media query ------- */
+    /*  header media query  */
     header > nav > menu > li
     {
         padding: 0 7px;
@@ -970,7 +970,7 @@ footer >div > div > ul > li > a
 }
 @media only screen and (max-width:769px)  
 {
-    /* ------- header media query ------- */
+    /*  header media query  */
     header > div:last-child
     {
         display: flex;
@@ -1092,7 +1092,7 @@ footer >div > div > ul > li > a
     {
         display: none;
     }
-    /* ------- footer media query ------- */
+    /*  footer media query  */
     footer > div > div
     {
         flex-basis: 80%;
@@ -1148,7 +1148,7 @@ footer >div > div > ul > li > a
     {
         font-size: .9em;
     }
-    /* ------- footer media query ------- */
+    /*  footer media query  */
     footer > div >div
     {
         flex-basis: 60%;
